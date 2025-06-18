@@ -1,21 +1,19 @@
-s = "racecar"
-t = "carrace"
+# prices = [10,1,5,6,7,1]
 
-shmap = {}
-thmap = {}
+prices=[5,1,5,6,7,1,10]
 
-for i in range(len(s)):
-    if s[i] in shmap:
-        shmap[s[i]] += 1
+
+if len(prices) == 2:
+    if prices[-1] - prices [0] > 0:
+        print( prices[-1] - prices [0])
     else:
-        shmap[s[i]] = 1
+        print( 0)
 
+l = 0
+ans = 0
+for r in range(len(prices)):
+    ans =  max((prices[r] - prices[l]), ans)
+    if prices[l] > prices[r]:
+        l = r
+print((ans))
 
-for i in range(len(t)):
-    if t[i] in thmap:
-        thmap[t[i]] += 1
-    else:
-        thmap[t[i]] = 1    
-
-if shmap == thmap:
-    print(True)
