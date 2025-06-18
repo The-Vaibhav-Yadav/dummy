@@ -1,12 +1,21 @@
-nums = [1,2,3]
+s = "racecar"
+t = "carrace"
 
-hmap = {}
+shmap = {}
+thmap = {}
 
-for num, i in enumerate(nums):
-    if i in hmap:
-        print(True)
+for i in range(len(s)):
+    if s[i] in shmap:
+        shmap[s[i]] += 1
     else:
-        hmap[i] = num
+        shmap[s[i]] = 1
 
-print(hmap)
 
+for i in range(len(t)):
+    if t[i] in thmap:
+        thmap[t[i]] += 1
+    else:
+        thmap[t[i]] = 1    
+
+if shmap == thmap:
+    print(True)
