@@ -1,17 +1,12 @@
-points = [[10,16],[2,8],[1,6],[7,12]]
+nums = [1,2,3]
 
-points.sort()
+hmap = {}
 
-res = len(points)
-prev = points[0]
-
-for i in range(1, len(points)):
-    curr = points[i]
-
-    if curr[0] <= prev[1]:
-        prev = [curr[0], min(prev[1], curr[1])]
-        res -= 1
+for num, i in enumerate(nums):
+    if i in hmap:
+        print(True)
     else:
-        prev = curr
+        hmap[i] = num
 
-print(res)
+print(hmap)
+
