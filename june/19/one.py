@@ -1,6 +1,4 @@
 s="(){}}{"
-
-
 stack = s[0]
 
 for i in range(1, len(s)):
@@ -19,9 +17,5 @@ for i in range(1, len(s)):
 
         else:
             stack = stack + s[i]
-
-
-# if stack == "":
-#     print(True)
 
 print(stack)
