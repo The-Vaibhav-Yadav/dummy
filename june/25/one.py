@@ -12,6 +12,5 @@ for n in nums:
         sub = 0
     sub += n
     maxs = max(maxs, sub)
-
         
 print(maxs)
